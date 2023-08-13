@@ -2,16 +2,18 @@
 import CourseGoalList from "./CourseGoalList";
 function CourseList(props){
     return(
-        <div >
+        <ul >
 
             {props.goals.map(obj=>{
-                return <CourseGoalList key ={obj.id} title ={obj.courseTitle}>
+                return <CourseGoalList key ={obj.id}
+                id ={obj.id} title ={obj.courseTitle}
+                onDelete = {props.onDeleteItem}>
                     
                 </CourseGoalList>
                         
                 
             })}
-        </div>
+        </ul>
     )
 }
 export default CourseList;

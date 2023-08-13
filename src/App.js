@@ -16,10 +16,17 @@ function App() {
     setGoals((prevData)=>[goals,...prevData]);
     console.log(goalData);
   }
+  const deleteItemHandler = goalId => {
+    setGoals(prevGoals => {
+      const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
+      return updatedGoals;
+    });
+  };
+
   return (
     <div className="App">
       <AddNewGoal  getAddedGoals ={getAddedGoalsHandler}></AddNewGoal>
-      <CourseList goals ={goalData}></CourseList>
+      {goalData.length > 0 && <CourseList goals ={goalData} onDeleteItem={deleteItemHandler}></CourseList>}
     </div>
   );
 }

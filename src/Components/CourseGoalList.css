@@ -1,21 +1,27 @@
 .add-list{
+    
     display: flex;
-    flex-direction: row;
-    border:  2px solid rgb(148, 35, 228);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(148, 35, 228);
     background-color: rgb(148, 35, 228);
     margin: 2rem;
-    justify-content: space-around;
-    align-self: start;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    height: 40px;
+    max-width: 50%;
+    
 }
 .add-list-control{
-    display: flex;
+   display: flex;
     flex-direction: column;
     align-items: start;
 }
-.add-list-control p{
+.add-list-control li{
     font-size: 20px;
     color : white;
     font-weight: bold;
+    list-style: none;
+    align-items: center;
 }
