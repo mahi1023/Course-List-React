@@ -1,5 +1,5 @@
 
-import './CourseGoalList.css'
+import './CourseGoalList.css';
 function CourseGoalList(props){
  const deleteHandler = ()=>{
     props.onDelete(props.id);
